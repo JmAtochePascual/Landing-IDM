@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --tertiary-color: #5543fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  width: 90%;
+  max-width: 102.4rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-block: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.section {
+  width: 90%;
+  max-width: 102.4rem;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+  display: grid;
+  align-items: center;
+  gap: 8rem;
+  grid-auto-flow: dense;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.section-description {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: gray;
+}
+
+.form-container {
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(216, 216, 216);
+  outline: none;
+
+}
+
+.form-button {
+  width: 100%;
+  padding: 1rem;
+  display: block;
+  border-radius: 0.5rem;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #4433c2;
+}
+
+.section-about {
+  width: 90%;
+  max-width: 102.4rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-bar {
+    flex-direction: row;
+  }
+
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+
+  .section-about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .img-three {
+    justify-self: end;
+  }
+
+  .section-vuelta-img {
+    grid-column-start: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    width: 70%;
+  }
+}
