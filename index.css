@@ -86,6 +86,7 @@ h2 {
 
 .toggle-button {
   font-size: 2rem;
+  background-color: transparent;
 }
 
 .logo {
