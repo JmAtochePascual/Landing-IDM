@@ -93,7 +93,9 @@ h2 {
 }
 
 .section-img {
-  justify-self: right;
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
 }
 
 .img-vuelta {
@@ -186,6 +188,13 @@ h2 {
   .section {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .section-img {
+    width: unset;
+    max-width: 100%;
+    margin: unset;
+    justify-self: right;
   }
 
   .section-description {
