@@ -11,20 +11,42 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./index.css">
   <meta name="description" content="Landing page de una empresa de desarrollo de software">
+  <!-- Toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <!-- Slideout -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js"></script> -->
+
   <title>LANDING PAGE</title>
 </head>
-<body>
+<body class="body">
   <header class="header">
-    <img class="logo" src="./img/logo.png" alt="logo">
+    <div class="header-wrapper">
+      <img class="logo" src="./img/logo.png" alt="logo">
 
-    <nav class="nav-bar">
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </nav>
+      <button id="toggle-button" class="toggle-button">☰</button>
+
+      <nav class="nav-bar">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
+  <nav id="sidebar" class="sidebar">
+    <div class="sidebar-close-button">
+      <button id="close-button" class="close-button">✕</button>
+    </div>
+    <p class="sidebar-title">Menu</p>
+    <a id="sidebar-nav-link" class="sidebar-nav-link" href="#hero">Hero</a>
+    <a id="sidebar-nav-link" class="sidebar-nav-link" href="#about">About</a>
+    <a id="sidebar-nav-link" class="sidebar-nav-link" href="#contact">Contact</a>
+  </nav>
+
   <main class="main">
-    <section class="section">
+    <section id="hero" class="section">
       <img class="img-vuelta section-img" src="./img/ImgLanding-01.png" alt="hero">
 
       <div class="section-description">
@@ -126,5 +148,7 @@
       </div>
     </section>
   </main>
+
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
