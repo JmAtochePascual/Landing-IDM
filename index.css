@@ -30,6 +30,10 @@ img {
   display: block;
 }
 
+img:not(.logo) {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
 p {
   line-height: 2;
   color: var(--gray);
@@ -95,6 +99,13 @@ h2 {
 .nav-link {
   text-decoration: none;
   color: #000;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  font-weight: 700;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
 }
 
 /* Sidebar */
@@ -256,6 +267,47 @@ h2 {
   height: 100vh;
 }
 
+/* Footer */
+.footer {
+  padding: 4rem 0 1.6rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.footer-wrapper {
+  width: 90%;
+  max-width: 102.4rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.footer-nav-link:hover {
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer-text {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
 
   body {
@@ -271,7 +323,7 @@ h2 {
 
   .nav-bar {
     display: flex;
-    gap: 1rem;
+    gap: 2.4rem;
   }
 
   .toggle-button {
@@ -309,6 +361,14 @@ h2 {
 
   .section-vuelta-img {
     grid-column-start: 2;
+  }
+
+  .footer-wrapper {
+    flex-direction: row;
+  }
+
+  .footer-nav {
+    flex-direction: row;
   }
 }
 
