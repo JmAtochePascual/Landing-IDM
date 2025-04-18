@@ -67,13 +67,6 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.header-scroll {
-  background-color: rgba(255, 255, 255, 0.459);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .header-wrapper {
   width: 90%;
   max-width: 102.4rem;
@@ -106,7 +99,7 @@ h2 {
   color: var(--primary-color);
   font-weight: 700;
   transform: scale(1.5);
-  transition: all 0.3s ease;
+  transition: all .3s ease;
 }
 
 /* Sidebar */
@@ -164,6 +157,10 @@ h2 {
   right: 0;
 }
 
+.fixed {
+  position: fixed;
+}
+
 /* Main */
 .main {
   width: 90%;
@@ -216,6 +213,7 @@ h2 {
   border-radius: 0.4rem;
   background-color: #ebebeb;
   outline: none;
+  font-size: 1.6rem;
 }
 
 .form-button {
@@ -225,7 +223,6 @@ h2 {
   border-radius: 0.4rem;
   background-color: var(--primary-color);
   color: var(--white);
-  font-weight: 700;
   border: none;
   cursor: pointer;
 }
@@ -353,7 +350,7 @@ h2 {
   }
 
   .form {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 2fr;
   }
 
   .grid {
@@ -377,5 +374,9 @@ h2 {
 
   .section-title {
     font-size: 4rem;
+  }
+
+  .form {
+    grid-template-columns: 3fr 1fr;
   }
 }

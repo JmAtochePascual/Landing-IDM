@@ -1,86 +1,40 @@
-// Constants
-const SCROLL_THRESHOLD = 100;
-const SELECTORS = {
-  forms: '.form',
-  toggleButton: '#toggle-button',
-  sidebar: '#sidebar',
-  closeButton: '#close-button',
-  sidebarNavLinks: '.sidebar-nav-link',
-  header: '.header'
-};
 
-const CLASSES = {
-  show: 'show',
-  noScroll: 'no-scroll',
-  headerScroll: 'header-scroll'
-};
+document.addEventListener('DOMContentLoaded', () => {
+  const copyRightHTML = document.querySelector('#copyRight');
+  const formsHTML = document.querySelectorAll('.form');
+  const hamburgerButtonHtml = document.querySelector('#toggle-button');
+  const closeButtonHtml = document.querySelector('#close-button');
+  const sidebarnHtml = document.querySelector('#sidebar');
 
-// Toast Configuration
-const TOAST_CONFIG = {
-  text: "Notification sent, check your email",
-  className: "email-toast",
-  position: "center",
-  style: {
-    background: "#158de8"
-  }
-};
+  // Funtions
 
-// DOM Elements
-const elements = {
-  forms: document.querySelectorAll(SELECTORS.forms),
-  toggleButton: document.getElementById(SELECTORS.toggleButton.slice(1)),
-  sidebar: document.getElementById(SELECTORS.sidebar.slice(1)),
-  closeButton: document.getElementById(SELECTORS.closeButton.slice(1)),
-  sidebarNavLinks: document.querySelectorAll(SELECTORS.sidebarNavLinks),
-  header: document.querySelector(SELECTORS.header)
-};
+  const sendNotification = (event) => {
+    event.preventDefault();
 
-// Utility Functions
-const toggleSidebar = () => {
-  elements.sidebar.classList.toggle(CLASSES.show);
-  document.body.classList.toggle(CLASSES.noScroll);
-};
+    Toastify({
+      text: "Notification sent, check your email",
+      duration: 1000,
+      gravity: "top",
+      position: "center",
+      style: {
+        background: '#158de8',
+      },
+    }).showToast();
+  };
 
-const closeSidebar = () => {
-  elements.sidebar.classList.remove(CLASSES.show);
-  document.body.classList.remove(CLASSES.noScroll);
-};
+  const toggleSidebar = () => {
+    sidebarnHtml.classList.toggle('show');
+    document.body.classList.toggle('fixed')
+  };
 
-const handleScroll = () => {
-  if (window.scrollY > SCROLL_THRESHOLD) {
-    elements.header.classList.add(CLASSES.headerScroll);
-  } else {
-    elements.header.classList.remove(CLASSES.headerScroll);
-  }
-};
+  // Events
 
-const mostrarToast = () => {
-  Toastify(TOAST_CONFIG).showToast();
-};
+  formsHTML.forEach((form) => form.addEventListener('submit', sendNotification));
 
-const handleFormSubmit = (e) => {
-  e.preventDefault();
-  mostrarToast();
-  e.target.reset();
-};
+  hamburgerButtonHtml.addEventListener('click', toggleSidebar);
 
-// Event Handlers Setup
-const setupEventListeners = () => {
-  // Form submissions
-  elements.forms.forEach(form => {
-    form.addEventListener('submit', handleFormSubmit);
-  });
+  closeButtonHtml.addEventListener('click', toggleSidebar);
 
-  // Sidebar controls
-  elements.toggleButton.addEventListener('click', toggleSidebar);
-  elements.closeButton.addEventListener('click', closeSidebar);
-  elements.sidebarNavLinks.forEach(link => {
-    link.addEventListener('click', closeSidebar);
-  });
+  copyRightHTML.innerHTML = `All rights reserved &copy; ${new Date().getFullYear()}`;
 
-  // Scroll handler
-  window.addEventListener('scroll', handleScroll);
-};
-
-// Initialize
-document.addEventListener('DOMContentLoaded', setupEventListeners);
+});
