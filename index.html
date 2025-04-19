@@ -12,6 +12,7 @@
     rel="stylesheet">
 
   <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="./index.css">
 
   <title>Logobly</title>
@@ -22,7 +23,7 @@
     <div class="container header__wrapper">
       <img class="header__logo" src="./img/logo.png" alt="logo">
 
-      <button id="header-buttom" class="header__menu">☰</button>
+      <button id="open-menu" class="header__menu">☰</button>
 
       <nav class="header__nav">
         <a class="header__link" href="#about">About</a>
@@ -32,7 +33,7 @@
   </header>
 
   <aside id="sidebar" class="sidebar">
-    <button id="sidebar-buton" class="sidebar__button">✕</button>
+    <button id="close-menu" class="sidebar__button">✕</button>
 
     <p class="sidebar__title">Menu</p>
     <nav class="sidebar__nav">
@@ -164,6 +165,7 @@
 
     <p id="copyRight" class="footer__copyright"> All rights reserved &copy; 2024 </p>
   </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script type="module" src="./index.js"></script>
 </body>
 </html>

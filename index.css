@@ -22,11 +22,6 @@ body {
   position: relative;
   font-family: var(--primary-font);
   font-size: 1.6rem;
-  padding-top: 10rem;
-
-  @media (width>=768px) {
-    padding-top: 0;
-  }
 }
 
 img:not(.header__logo) {
@@ -94,6 +89,8 @@ h2 {
 
 .header__menu {
   font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
 
   @media (width>=768px) {
     display: none;
@@ -122,7 +119,7 @@ h2 {
 
 .sidebar {
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   top: 0;
   bottom: 0;
   right: 0;
@@ -147,6 +144,7 @@ h2 {
   font-weight: 900;
   color: var(--white);
   background-color: var(--black);
+  cursor: pointer;
 }
 
 .sidebar__title {
@@ -172,7 +170,7 @@ h2 {
 /* *Section */
 
 .section {
-  margin-bottom: 12rem;
+  padding-top: 10rem;
   display: grid;
   justify-items: center;
   gap: 8rem;
@@ -243,7 +241,7 @@ h2 {
 /* * Grid */
 
 .grid {
-  margin-bottom: 10rem;
+  padding-top: 10rem;
   display: grid;
   justify-items: center;
   gap: 4rem;
@@ -271,11 +269,13 @@ h2 {
 /* * footer */
 
 .footer {
+  margin-top: 4rem;
   padding: 4rem 0 2rem;
   background-color: var(--black);
 }
 
 .footer__wrapper {
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
