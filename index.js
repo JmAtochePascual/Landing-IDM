@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
   const openMenuButton = document.querySelector('#open-menu');
   const closeMenuButton = document.querySelector('#close-menu');
-  const linksHTML = document.querySelectorAll('.sidebar__link');
   const sidebarHTML = document.querySelector('#sidebar');
+  const linksSidebarHTML = document.querySelectorAll('.sidebar__link');
   const formsHTML = document.querySelectorAll('.form');
-  const alertHTML = document.querySelector('#alert');
-  const body = document.body;
+  const copyright = document.querySelector('#copyRight');
 
   const toggleSidebar = () => {
     sidebarHTML.classList.toggle('show-sidebar');
@@ -26,11 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
+  copyright.innerHTML = `All rights reserved &copy; ${new Date().getFullYear()}`;
+
   openMenuButton.addEventListener('click', toggleSidebar);
 
   closeMenuButton.addEventListener('click', toggleSidebar);
 
-  linksHTML.forEach(link => link.addEventListener('click', toggleSidebar));
+  linksSidebarHTML.forEach(link => link.addEventListener('click', toggleSidebar));
 
   formsHTML.forEach(form => form.addEventListener('submit', showNotification));
 })
