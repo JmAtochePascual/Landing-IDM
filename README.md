@@ -12,6 +12,10 @@ Logobly es una landing page moderna y responsive para una empresa de desarrollo 
 
 ## Tecnologías
 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 - **HTML:** Lenguaje de marcado para estructurar el contenido de la página.
 - **CSS:** Lenguaje de estilos utilizado para definir la presentación visual y el diseño responsivo.
 - **JavaScript:** Lenguaje de programación que permite agregar interactividad y dinamismo.
