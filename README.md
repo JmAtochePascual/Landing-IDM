@@ -1,6 +1,6 @@
 # Logobly
 
-Logobly es una landing page moderna y responsive para una empresa de desarrollo de software especializada en la creación rápida de logos para startups. La página está diseñada con HTML y CSS, enfocada en una experiencia simple y directa para captar correos electrónicos de usuarios interesados. Incluye navegación adaptable, diseño atractivo y secciones informativas sobre el producto.
+Logobly es una landing page moderna y responsive para una empresa de desarrollo de software especializada en la creación rápida de logos para startups. La página está diseñada con HTML, CSS y JavaScript, enfocada en una experiencia simple y directa para captar correos electrónicos de usuarios interesados. Incluye navegación adaptable, diseño atractivo y secciones informativas sobre el producto.
 
 ## Características
 
