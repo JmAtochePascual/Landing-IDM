@@ -20,6 +20,16 @@ Logobly es una landing page moderna y responsive para una empresa de desarrollo 
 - **CSS:** Lenguaje de estilos utilizado para definir la presentación visual y el diseño responsivo.
 - **JavaScript:** Lenguaje de programación que permite agregar interactividad y dinamismo.
 
+## Estructura del proyecto
+
+- **src:** Directorio que contiene el código fuente del proyecto.
+  - **css:** Directorio que contiene los archivos de estilos.
+  - **img:** Directorio que contiene las imágenes del proyecto.
+  - **js:** Directorio que contiene los archivos de JavaScript.
+  - **favicon:** Directorio que contiene los archivos del favicon.
+- **index.html:** Archivo principal que contiene el código HTML del proyecto.
+- **README.md:** Archivo que contiene la documentación del proyecto.
+
 ## Uso
 
 > Nota: No requiere instalación de dependencias. Solo abra el archivo `index.html` en un navegador.
@@ -66,4 +76,4 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 Este proyecto se encuentra disponible bajo la licencia MIT. Puedes consultar los términos completos [aquí](https://opensource.org/licenses/MIT).
 
-Desarrollado con 💚 por JMCode | © 2025 - Transformando ideas en soluciones digitales
+<p align="center" style="margin-top: 120px;">Desarrollado con 🤍 por JMCode | Transformando ideas en soluciones digitales</p>
