@@ -5,7 +5,6 @@ Logobly es una landing page moderna y responsive para una empresa de desarrollo 
 ## Características
 
 - Diseño adaptable para móviles y escritorio.
-- Formulario de suscripción funcional.
 - Navegación lateral desplegable.
 - Código organizado con metodología BEM.
 - Optimización básica para motores de búsqueda (SEO).
